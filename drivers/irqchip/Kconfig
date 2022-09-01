@@ -525,6 +525,14 @@ config RISCV_INTC
 
 	   If you don't know what to do here, say Y.
 
+config SHAKTI_PLIC
+	bool "Shakti Platform-Level Interrupt Controller"
+	depends on RISCV
+	select IRQ_DOMAIN_HIERARCHY
+	help
+	   This enables support for the PLIC chip found in Shakti (and
+	   potentially other) Shakti based RISC-V systems.
+
 config SIFIVE_PLIC
 	bool "SiFive Platform-Level Interrupt Controller"
 	depends on RISCV
